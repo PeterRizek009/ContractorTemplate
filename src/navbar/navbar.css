@@ -1,0 +1,39 @@
+.navbar ul li a {
+  position: relative;
+  font-size: 16px;
+  padding: 40px 20px;
+  color: rgba(43, 43, 43, 0.854);
+  transition: 0.5s;
+}
+.navbar ul li a:after {
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  content: "";
+  width: 70%;
+  height: 2px;
+  background: #a13a03;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transform: translate3d(0, -10px, 0);
+  transform: translate3d(0, -10px, 0);
+}
+.navbar ul li a:hover {
+  color: #5f2202;
+}
+.navbar ul li a:hover:after {
+  opacity: 1;
+}
+
+
+.hamburger-react{
+  width: 80%;
+}
+
+
+
+
+
