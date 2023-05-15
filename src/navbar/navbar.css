@@ -1,11 +1,10 @@
 .navbar ul li a {
   position: relative;
   font-size: 16px;
-  padding: 40px 20px;
   color: rgba(43, 43, 43, 0.854);
   transition: 0.5s;
 }
-.navbar ul li a:after {
+/* .navbar ul li a:after {
   position: absolute;
   bottom: 28px;
   left: 0;
@@ -23,7 +22,7 @@
 }
 .navbar ul li a:hover {
   color: #5f2202;
-}
+} */
 .navbar ul li a:hover:after {
   opacity: 1;
 }

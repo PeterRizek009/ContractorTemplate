@@ -10,7 +10,6 @@ const Nav = () => {
 
     const showMenu = () => {
         setActive(!active)
-        console.log(active);
     }
 
     return (
@@ -22,21 +21,21 @@ const Nav = () => {
                     <Hamburger color='rgba(111, 33, 0, 0.927)'  onToggle={showMenu} />
                 </div>
 
-                <ul className={active ?"absolute mx-auto top-24 bg-white w-full  md:flex justify-between items-center py-2  space-y-4": "hidden md:flex"}>
-                    <li className="nav-item  after:underline-offset-4">
-                        <Link className="nav-link active" aria-current="page" to={"/"}>Home</Link>
+                <ul className={active ?"absolute mx-auto top-24 bg-white w-full  md:flex justify-between items-center p-2  space-y-4": "hidden md:flex"}>
+                    <li className="nav-item ">
+                        <Link className="nav-link active  hover:text-orange-400  p-3" aria-current="page" to={"/"}>Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" href="#">Projects</Link>
+                        <Link className="nav-link   p-3" href="#">Projects</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" href="#">Solutions</Link>
+                        <Link className="nav-link   p-3" href="#">Solutions</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" href="#">Contact us</Link>
+                        <Link className="nav-link   p-3" href="#">Contact us</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" href="#">About us</Link>
+                        <Link className="nav-link   p-3" href="#">About us</Link>
                     </li>
                 </ul>
             </nav>
