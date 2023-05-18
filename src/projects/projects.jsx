@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import "./projects.css"
+import './projects.css'
 import projIM from "./project.jpg"
 import project2 from "./Project2.jpg"
 import project3 from "./project3.jpg"
-// import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs'
+
 import { RxDotFilled } from 'react-icons/rx'
 import { MdPlumbing } from 'react-icons/md'
 import { TbPaintFilled } from 'react-icons/tb'
-
 
 
 const Projects = () => {
@@ -43,20 +42,10 @@ const Projects = () => {
 
   const DotStyle = {
     color: 'orange',
-    scale: '1.5' 
+    scale: '1.7' 
   };
 
-  // const prevSlide = () => {
-  //   index === 0 ? setIndex(projectData.length - 1)
-  //     :
-  //     setIndex(index - 1)
-  // }
 
-  // const nextSlide = () => {
-  //   index === projectData.length - 1 ? setIndex(0)
-  //     :
-  //     setIndex(index + 1)
-  // }
 
   const goToSlide = (slideIndex) => {
       setIndex(slideIndex)
@@ -69,10 +58,9 @@ const Projects = () => {
 
   return (
     <>
-      <section className="projects mb-24 bg-cover bg-no-repeat mt-4">
-        <h1 className='text-3xl leading-6 text-white text-center py-8 uppercase'>Latest Projects</h1>
-       
-        <div className='lg:max-w-[900px] max-w-[650px] h-[400px] md:h-[600px] w-full m-auto p-3  relative bg-black rounded-2xl shadow-lg'>
+      <section className="projects pb-12 bg-cover bg-no-repeat my-4 border-white">
+        <h1 className='text-3xl leading-6 text-black text-center py-8 uppercase'>Latest Projects</h1>
+        <div className='lg:max-w-[900px] max-w-[650px] h-[400px] md:h-[600px] w-full mx-auto p-2  relative bg-gray-900 rounded-2xl  shadow-lg'>
           <div style={{ backgroundImage: `url(${projectData[index].projectImg})` }} className='relative w-full h-full rounded-2xl  bg-cover bg-no-repeat duration-500 cursor-grab'
            onDrag={() => DragSlides(index)}>
           <div className='absolute bottom-[5%]  flex flex-col items-start  px-8 text-white'>
@@ -85,14 +73,7 @@ const Projects = () => {
               <p className='md:w-1/2 text-lg md:text-2xl py-2 md:py-5'>{projectData[index].projectDetails}</p>
             </div>
 
-            {/* left arrow   */}
-            {/* <div className='absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl  rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-              <BsChevronCompactLeft size={30} onClick={prevSlide} />
-            </div> */}
-            {/* Right arrow   */}
-            {/* <div className='absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 text-2xl  rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-              <BsChevronCompactRight size={30} onClick={nextSlide} />
-            </div> */}
+          
             <div className='absolute top-[45%] rotate-90 right-0 flex py-2'>
                 {projectData.map((slide, slideIndex) => (
                 <div key={slideIndex} className='text-4xl cursor-pointer' >
