@@ -16,21 +16,21 @@ const Projects = () => {
   const projectData = [
     {
       'projectName': "project1",
-      'projectIcon' : <TbPaintFilled size={20}/>,
+      'projectIcon' : <TbPaintFilled size={23}/>,
       'projectImg': project2,
       'projectDetails': "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores iusto, blanditiis cumque nulla vitae consequatur.",
 
     },
     {
       'projectName': "project2",
-      'projectIcon' : <MdPlumbing size={20}/>,
+      'projectIcon' : <MdPlumbing size={23}/>,
       'projectImg': projIM,
       'projectDetails': "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores iusto, blanditiis cumque nulla vitae consequatur.",
 
     },
     {
       'projectName': "project3",
-      'projectIcon' : <TbPaintFilled size={20}/>,
+      'projectIcon' : <TbPaintFilled size={23}/>,
       'projectImg': project3,
       'projectDetails': "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores iusto, blanditiis cumque nulla vitae consequatur.",
 
@@ -62,15 +62,22 @@ const Projects = () => {
       setIndex(slideIndex)
   }
 
+
+  const DragSlides =  (slideIdx) => {
+    slideIdx === projectData.length -1 ? setIndex(0) : setIndex(slideIdx + 1)
+  }
+
   return (
     <>
       <section className="projects mb-24 bg-cover bg-no-repeat mt-4">
         <h1 className='text-3xl leading-6 text-white text-center py-8 uppercase'>Latest Projects</h1>
+       
         <div className='lg:max-w-[900px] max-w-[650px] h-[400px] md:h-[600px] w-full m-auto p-3  relative bg-black rounded-2xl shadow-lg'>
-          <div style={{ backgroundImage: `url(${projectData[index].projectImg})` }} className='relative w-full h-full rounded-2xl  bg-cover bg-no-repeat duration-500'>
+          <div style={{ backgroundImage: `url(${projectData[index].projectImg})` }} className='relative w-full h-full rounded-2xl  bg-cover bg-no-repeat duration-500 cursor-grab'
+           onDrag={() => DragSlides(index)}>
           <div className='absolute bottom-[5%]  flex flex-col items-start  px-8 text-white'>
             <div className='flex justify-between py-3'>
-              <div className='bg-orange-500 rounded-full p-1 md:p-2'>
+              <div className='bg-orange-500 rounded-full p-1 md:p-3'>
               {projectData[index].projectIcon}
                </div>
               <h2 className='text-xl font-bold md:text-4xl uppercase mx-3'>{projectData[index].projectName}</h2>
@@ -85,13 +92,12 @@ const Projects = () => {
             {/* Right arrow   */}
             {/* <div className='absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 text-2xl  rounded-full p-2 bg-black/20 text-white cursor-pointer'>
               <BsChevronCompactRight size={30} onClick={nextSlide} />
-
             </div> */}
             <div className='absolute top-[45%] rotate-90 right-0 flex py-2'>
-              {projectData.map((slide, slideIndex) => (
+                {projectData.map((slide, slideIndex) => (
                 <div key={slideIndex} className='text-4xl cursor-pointer' >
                   {slideIndex === index ?
-                    <RxDotFilled style={DotStyle} onClick={() => setIndex(slideIndex)} />
+                    <RxDotFilled style={DotStyle} onClick={() => setIndex(slideIndex)} onDrag={() => setIndex(slideIndex)} />
                     :
                     <RxDotFilled style={{ color: 'white' }} onClick={() => goToSlide(slideIndex)} />
                   }
