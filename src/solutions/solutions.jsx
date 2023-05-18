@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { MdPlumbing } from 'react-icons/md'
 import { TbPaintFilled } from 'react-icons/tb'
+import { MdOutlineElectricalServices } from 'react-icons/md'
 import Background from './bg.png'
-import { BsDashLg } from 'react-icons/bs'
-
+import { RxDotFilled } from 'react-icons/rx'
 
 const Solutions = () => {
 
@@ -11,11 +11,12 @@ const Solutions = () => {
 
     const [width, setWidth] = useState(0);
 
+
     useEffect(() => {
         const updateWindowDimensions = () => {
             const newWidth = window.innerWidth;
             setWidth(newWidth);
-            console.log(width);
+           
         };
 
         window.addEventListener("resize", updateWindowDimensions);
@@ -24,49 +25,55 @@ const Solutions = () => {
 
     }, [window.innerWidth]);
 
+
+
+
+    const DotStyle = {
+        color: 'orange',
+        scale: '1.4'
+    };
+
+
     const solutionsData = [
         {
-            'soluLogo': <TbPaintFilled size={25} />,
+            'soluLogo': <TbPaintFilled size={30} />,
             'soluName': 'Painting Works',
             'soluDetails': ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, deserunt?'
         },
         {
-            'soluLogo': <MdPlumbing size={25} />,
+            'soluLogo': <MdPlumbing size={30} />,
             'soluName': 'Painting Works',
             'soluDetails': ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, deserunt?'
         },
         {
-            'soluLogo': <MdPlumbing size={25} />,
+            'soluLogo': <MdOutlineElectricalServices size={30} />,
             'soluName': 'Painting Works',
             'soluDetails': ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, deserunt?'
         },
         {
-            'soluLogo': <MdPlumbing size={25} />,
+            'soluLogo': <MdPlumbing size={30} />,
             'soluName': 'Painting Works',
             'soluDetails': ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, deserunt?'
         },
     ]
 
     const handleOnDragStart = () => {
-
         index === solutionsData.length - 1 ? setIndex(0) : setIndex(index + 1)
+        
     }
 
 
-    const DotStyle = {
-        color: 'orange',
-        scale: '1.2'
-    };
+
 
 
     return (
         <section className='solutions relative min-w-[100%] min-h-[600px] my-4 bg-cover bg-no-repeat' style={{ backgroundImage: `url(${Background})` }} >
             <h1 className='text-3xl leading-6 text-white text-center py-10 uppercase'>Our Solutions</h1>
 
-            {width > 800 ?
+            {width > 760 ?
                 <div className='cards w-[100%] p-12  flex justify-between items-center flex-wrap'>
                     {solutionsData.map((solution, index) => (
-                        <div className='card md:w-[30%] lg:w-[22%]  bg-white my-8 mx-2 py-14 flex flex-row flex-wrap justify-center items-end shadow-md'>
+                        <div className='card md:w-[30%] lg:w-[22%]  bg-white my-8 mx-2 py-14 flex flex-row flex-wrap justify-center items-end shadow-md rounded-md'>
                             <div key={index} className='bg-orange-400  rounded-full p-4 md:p-6 text-black'>{solution.soluLogo}</div>
                             <h4 className='text-xl uppercase text-black p-6'>{solution.soluName}</h4>
                             <p className='text-md p-4'>{solution.soluDetails}</p>
@@ -76,25 +83,26 @@ const Solutions = () => {
                     }
                 </div>
                 :
-                <div className='relative flex justify-center' >
-                    <div className='card w-[50%]  bg-white my-16 mx-auto py-14  shadow-md cursor-grabbing duration-500' draggable="true"
+                <div className='flex justify-center flex-row flex-wrap' >
+                    <div className='card max-w-[60%]  bg-white my-16 mx-auto py-16  shadow-md cursor-grabbing duration-500 rounded-md' draggable="true"
                         onDragStart={handleOnDragStart}>
-                        <div className='bg-orange-400 rounded-full p-3 w-[15%] mx-auto text-black'>{solutionsData[index].soluLogo}</div>
-                        <h4 className='text-xl uppercase text-black p-6'>{solutionsData[index].soluName}</h4>
-                        <p className='text-md p-4'>{solutionsData[index].soluDetails}</p>
-                    </div>
+                        <div className='bg-orange-400 rounded-full p-4  w-[60px]  mx-auto text-black'>{solutionsData[index].soluLogo}</div>
+                        <h4 className='text-xl uppercase text-black p-6 text-center'>{solutionsData[index].soluName}</h4>
+                        <p className='text-xl p-4 mb-8'>{solutionsData[index].soluDetails}</p>
+                  
 
-                    <div className='absolute top-[88%] right-[40%] flex py-1'>
+                    <div className='flex justify-center items-end pt-1 mx-auto'>
                         {solutionsData.map((slide, slideIndex) => (
-                            <div key={slideIndex} className='text-4xl cursor-grabbing'  >
+                            <div key={slideIndex} className='text-3xl cursor-grabbing'  >
                                 {slideIndex === index ?
-                                    <BsDashLg style={DotStyle} />
+                                    <RxDotFilled style={DotStyle} />
                                     :
-                                    <BsDashLg style={{ color: 'black' }} />
+                                    <RxDotFilled style={{ color: 'black' }} />
                                 }
                             </div>
                         )
                         )}
+                          </div>
                     </div>
                 </div>
             }
