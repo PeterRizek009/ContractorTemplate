@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { MdPlumbing } from 'react-icons/md'
 import { TbPaintFilled } from 'react-icons/tb'
 import { MdOutlineElectricalServices } from 'react-icons/md'
-import Background from './bg.png'
 import { RxDotFilled } from 'react-icons/rx'
 
 const Solutions = () => {
@@ -65,7 +64,7 @@ const Solutions = () => {
 
 
     return (
-        <section className='solutions relative min-w-[100%] min-h-[600px] my-4 bg-cover bg-no-repeat' style={{ backgroundImage: `url(${Background})` }} >
+        <section className='solutions relative min-w-[100%] min-h-[600px] my-4 bg-cover bg-no-repeat bg-gray-800'  >
             <h1 className='text-3xl leading-6 text-white text-center py-10 uppercase'>Our Solutions</h1>
 
             {width > 760 ?

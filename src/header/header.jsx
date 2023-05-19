@@ -13,8 +13,8 @@ const Header = () => {
                     <button className='btn'>Learn More</button>
                 </div>
 
-                <div className='header-image md:w-1/2 mx-auto px-4 md:px-2 relative'>
-                    <img className='main max-h-[400px]  bg-cover bg-no-repeat' src={require('./header.jpg')} alt="header" />
+                <div className='header-image md:w-1/2 mx-auto px-2 md:px-2 relative'>
+                    <img className='main bg-cover bg-no-repeat' src={require('./header.jpg')} alt="header" />
                     <img className='md:h-48 h-32 z-10 absolute inset-x-20 bottom-0' src={require('./v-min.png')} alt="header" />
                 </div>
 
