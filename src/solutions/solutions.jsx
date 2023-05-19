@@ -23,9 +23,7 @@ const Solutions = () => {
 
         return () => window.removeEventListener("resize", updateWindowDimensions)
 
-    }, [window.innerWidth]);
-
-
+    }, []);
 
 
     const DotStyle = {

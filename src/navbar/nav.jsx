@@ -26,16 +26,16 @@ const Nav = () => {
                         <Link className="nav-link active  hover:text-orange-400  p-3" aria-current="page" to={"/"}>Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link   p-3" href="#">Projects</Link>
+                        <Link className="nav-link  hover:text-orange-400   p-3" href="#">Projects</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link   p-3" href="#">Solutions</Link>
+                        <Link className="nav-link hover:text-orange-400   p-3" href="#">Solutions</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link   p-3" href="#">Contact us</Link>
+                        <Link className="nav-link hover:text-orange-400   p-3" href="#">Contact us</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link   p-3" href="#">About us</Link>
+                        <Link className="nav-link hover:text-orange-400   p-3" href="#">About us</Link>
                     </li>
                 </ul>
             </nav>

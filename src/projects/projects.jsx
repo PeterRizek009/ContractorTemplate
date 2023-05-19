@@ -61,7 +61,7 @@ const Projects = () => {
     <>
       <section className="projects pb-12 bg-cover bg-no-repeat my-4 border-white">
         <h1 className='text-3xl leading-6 text-black text-center py-8 uppercase'>Latest Projects</h1>
-        <div className='lg:max-w-[900px] max-w-[650px] h-[400px] md:h-[600px] w-full mx-auto p-2  relative bg-gray-950 rounded-2xl  shadow-lg'>
+        <div className='lg:max-w-[900px] max-w-[600px]  h-[400px] md:h-[600px] w-full mx-auto p-2  relative bg-gray-950 rounded-2xl  shadow-lg'>
           <div style={{ backgroundImage: `url(${projectData[index].projectImg})` }} className='relative w-full h-full rounded-2xl  bg-cover bg-no-repeat duration-500 cursor-grab'
            onDrag={() => DragSlides(index)}>
           <div className='absolute bottom-[5%]  flex flex-col items-start  px-8 text-white'>
