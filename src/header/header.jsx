@@ -1,6 +1,7 @@
 import React from 'react';
 import Projects from '../projects/projects';
 import Solutions from '../solutions/solutions';
+import Aboutus from '../aboutus/aboutus';
 
 
 const Header = () => {
@@ -22,6 +23,7 @@ const Header = () => {
         </section>
         <Solutions/>
         <Projects />
+        <Aboutus/>
     </>);
 }
 
