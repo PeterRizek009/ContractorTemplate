@@ -83,7 +83,7 @@ const Solutions = () => {
                 :
                 <div className='flex justify-center flex-row flex-wrap' >
                     <div className='card max-w-[60%]  bg-white my-16 mx-auto py-16  shadow-md cursor-grabbing duration-500 rounded-md' draggable="true"
-                        onDragStart={handleOnDragStart}>
+                        onDragStart={handleOnDragStart} onTouchStart={handleOnDragStart}>
                         <div className='bg-orange-400 rounded-full p-4  w-[60px]  mx-auto text-black'>{solutionsData[index].soluLogo}</div>
                         <h4 className='text-xl uppercase text-black p-6 text-center'>{solutionsData[index].soluName}</h4>
                         <p className='text-xl p-4 mb-8'>{solutionsData[index].soluDetails}</p>
