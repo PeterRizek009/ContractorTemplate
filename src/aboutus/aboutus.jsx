@@ -33,13 +33,8 @@ const Aboutus = () => {
             'Date': '10/10/2019',
             'direction': 'left',
             'details': ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, deserunt?'
-        },
-        {
-            'title': 'Lorem ipsum',
-            'Date': '10/10/2019',
-            'direction': 'right',
-            'details': ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, deserunt?'
         }
+       
     ]
 
 

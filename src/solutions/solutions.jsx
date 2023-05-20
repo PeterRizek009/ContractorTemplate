@@ -3,6 +3,7 @@ import { MdPlumbing } from 'react-icons/md'
 import { TbPaintFilled } from 'react-icons/tb'
 import { MdOutlineElectricalServices } from 'react-icons/md'
 import { RxDotFilled } from 'react-icons/rx'
+import bgimage from './bg3.jpg'
 
 const Solutions = () => {
 
@@ -64,8 +65,8 @@ const Solutions = () => {
 
 
     return (
-        <section className='solutions relative min-w-[100%] min-h-[600px] my-4 bg-cover bg-no-repeat bg-gray-800'  >
-            <h1 className='text-3xl leading-6 text-white text-center py-10 uppercase'>Our Solutions</h1>
+        <section className='solutions relative min-w-[100%] min-h-[600px] my-4 bg-cover bg-no-repeat' style={{backgroundImage :`url(${bgimage})`}}  >
+            <h1 className='text-3xl leading-6 text-black text-center py-10 uppercase'>Our Solutions</h1>
 
             {width > 760 ?
                 <div className='cards w-[100%] p-12  flex justify-between items-center flex-wrap'>
