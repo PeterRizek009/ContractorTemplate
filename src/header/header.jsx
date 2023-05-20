@@ -3,6 +3,7 @@ import Projects from '../projects/projects';
 import Solutions from '../solutions/solutions';
 import Aboutus from '../aboutus/aboutus';
 import ContactUs from '../contactus/contactus';
+import Footer from '../footer/footer';
 
 
 const Header = () => {
@@ -26,6 +27,7 @@ const Header = () => {
         <Projects />
         <Aboutus/>
         <ContactUs/>
+        <Footer/>
     </>);
 }
 
