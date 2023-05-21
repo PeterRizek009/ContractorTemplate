@@ -61,7 +61,7 @@ const Footer = () => {
 
             <div className="border-t p-4   border-gray-100 md:col-start-1 md:col-end-5 ">
                 <div className="flex items-center justify-between">
-                    <ul className="flex flex-wrap gap-4 text-xs">
+                    <ul className="flex flex-wrap gap-2 text-xs">
                         <li>
                             Terms & Conditions
                         </li>
