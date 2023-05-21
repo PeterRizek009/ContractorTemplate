@@ -3,7 +3,6 @@ import './projects.css'
 import projIM from "./project.jpg"
 import project2 from "./Project2.jpg"
 import project3 from "./project3.jpg"
-
 import { RxDotFilled } from 'react-icons/rx'
 import { MdPlumbing } from 'react-icons/md'
 import { MdOutlineElectricalServices } from 'react-icons/md'
