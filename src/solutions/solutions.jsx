@@ -3,7 +3,7 @@ import { MdPlumbing } from 'react-icons/md'
 import { TbPaintFilled } from 'react-icons/tb'
 import { MdOutlineElectricalServices } from 'react-icons/md'
 import { RxDotFilled } from 'react-icons/rx'
-import bgimage from './bg3.jpg'
+
 
 const Solutions = () => {
 
