@@ -40,17 +40,17 @@ const Solutions = () => {
         },
         {
             'soluLogo': <MdPlumbing size={30} />,
-            'soluName': 'Painting Works',
+            'soluName': 'Plumbing Works',
             'soluDetails': ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, deserunt?'
         },
         {
             'soluLogo': <MdOutlineElectricalServices size={30} />,
-            'soluName': 'Painting Works',
+            'soluName': 'Electricity Works',
             'soluDetails': ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, deserunt?'
         },
         {
             'soluLogo': <MdPlumbing size={30} />,
-            'soluName': 'Painting Works',
+            'soluName': 'Plumbing Works',
             'soluDetails': ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, deserunt?'
         },
     ]
@@ -66,9 +66,9 @@ const Solutions = () => {
 
     return (
         <section className='solutions relative min-w-[100%] min-h-[600px] my-4 bg-cover bg-no-repeat bg-orange-400'   >
-            <h1 className='text-3xl leading-6 text-black text-center py-10 uppercase'>Our Solutions</h1>
+            <h1 className='text-3xl leading-6 text-black text-center py-6 uppercase'>Our Solutions</h1>
 
-            {width > 760 ?
+0            {width > 760 ?
                 <div className='cards w-[100%] p-12  flex justify-between items-center flex-wrap'>
                     {solutionsData.map((solution, index) => (
                         <div className='card md:w-[30%] lg:w-[22%]  bg-white my-8 mx-2 py-14 flex flex-row flex-wrap justify-center items-end shadow-md rounded-md'>

@@ -12,7 +12,7 @@ const Footer = () => {
     return (
         <footer className='bg-neutral-800  md:grid md:grid-cols-4 text-white'>
             <div className='block min-h-full md:col-span-2'>
-                <iframe src="https://maps.google.com/maps?q=Alexandria,+Alexandria+Governorate&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" title='companyMap' className='min-h-full w-full' ></iframe>
+                <iframe src="https://maps.google.com/maps?q=Alexandria,+Alexandria+manshia&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" title='companyMap' className='min-h-full w-full' ></iframe>
             </div>
 
 
