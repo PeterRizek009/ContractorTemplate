@@ -1,9 +1,10 @@
 import React from 'react';
 
-
+import { Element } from 'react-scroll'
 
 const ContactUs = () => {
     return (
+        <Element id='solutions' name='contactus'>
         <section className='solutions  h-auto my-4  bg-orange-400'>
             <h1 className='text-3xl leading-6 text-black text-center py-6 uppercase'>Contact us</h1>
 
@@ -56,6 +57,7 @@ const ContactUs = () => {
             </form>
 
         </section >
+        </Element>
     );
 }
 

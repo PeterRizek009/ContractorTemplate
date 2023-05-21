@@ -1,12 +1,9 @@
 import React from 'react';
 import bgImage from './bg2.png'
-
+import { Element } from 'react-scroll'
 
 
 const Aboutus = () => {
-
-
-
 
 
     const timelineData = [
@@ -34,7 +31,7 @@ const Aboutus = () => {
             'direction': 'left',
             'details': ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, deserunt?'
         }
-       
+
     ]
 
 
@@ -42,6 +39,7 @@ const Aboutus = () => {
 
 
     return (
+        <Element id='aboutus' name='aboutus'>
         <section className='min-w-[100%] min-h-[800px] my-4 bg-cover bg-no-repeat' style={{ backgroundImage: `url(${bgImage})` }}>
             <h1 className='text-3xl leading-6 text-black text-center py-10 uppercase'>About us</h1>
 
@@ -89,6 +87,7 @@ const Aboutus = () => {
 
 
         </section>
+        </Element>
     );
 }
 
