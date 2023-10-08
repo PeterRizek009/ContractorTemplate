@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
-
 import "./navbar.css"
 import { Divide as Hamburger } from "hamburger-react"
 import { Link } from 'react-scroll'
-
-
-
 
 
 
@@ -20,7 +16,7 @@ const Nav = () => {
 
     return (
         <>
-            <nav className="navbar  flex h-20 items-center justify-between  bg-white mt-5">
+            <nav className="navbar flex h-20 items-center justify-between bg-white mt-5">
                 <Link className="navbar-brand ms-5 text-black text-xl font-mono" to={"/"} spy={true}
                     smooth={true}
                     offset={-70}
